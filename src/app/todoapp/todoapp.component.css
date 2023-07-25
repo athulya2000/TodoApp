@@ -1,0 +1,62 @@
+/* .container{
+    background-color:lightgray;
+    width:100vh;
+    height: 100vh;
+
+} */
+.box{
+    width:1300px;
+    height:autopx;
+    background-color:white;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+.box h2{
+    color: black;
+    font-size:38px ;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-left: 20px;
+}
+.box h2 span{
+    font-size: 18px;
+    font-weight:normal;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 930px;
+}
+.form-control{
+    /* width:1200px;
+    height:50px;
+    background-color:#E7E7E7;
+    margin-left: 20px;
+    margin-top: 30px;
+    */
+    width: 1160px; /* Decreased the width to make space for the icon */
+    height: 50px;
+    background-color: #E7E7E7;
+    margin-left: 20px;
+    margin-top: 30px;
+    padding-left: 40px;
+    
+}
+.icon{
+    /* display: inline-block;
+    background-color: #E7E7E7; 
+   margin-left: 20px; */
+   position: absolute; /* Added to position the icon */
+   top: 24%;
+   left: 114px; /* Adjust this value to control the horizontal position of the icon */
+   transform: translateY(-50%); /* Center the icon vertically */
+   background-color: #E7E7E7;
+   padding: 10px;
+   
+   
+
+}
+.form-check-label {
+    text-decoration:none;
+  }
+
+   
+  
+

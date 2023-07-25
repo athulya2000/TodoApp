@@ -1,0 +1,59 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+      <div class="box">
+        <h2>Todo App <span>Completed {{ getCompletedTasksCount() }}/{{ getIncompleteTasksCount() }}</span></h2>
+        <div class="add">
+          <span class="icon">
+            <i class="fas fa-plus"></i>
+          </span>
+
+          <input name="task" [(ngModel)]="task" type="text" class="form-control" placeholder="add a todo..." />
+          <button (click)="readValues()" class="btn btn-light" style="
+                margin-left: 1200px;
+                margin-top: -74px;
+                width: 55px;
+                height: 45px;
+                background-color: #e7e7e7;
+              ">
+            Add
+          </button>
+
+          <table class="table" *ngFor="let i of todo">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <div class="form-check" style="
+                        margin-left: 20px;
+                        height: 55px;">
+
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked"
+                      [(ngModel)]="i.completed" />
+                    <label class="form-check-label" for="flexCheckChecked"
+                      [ngStyle]="{ 'text-decoration': i.completed ? 'line-through' : 'none' }"
+                      style="margin-left: 10px;">
+                      {{ i.task }}
+                    </label>
+                    <div style="flex: 1;"></div>
+                    <button (click)="deleteTask(i.id)" type="button" class="btn btn-outline-danger"
+                      style="margin-left: 1000px; margin-bottom: 40px; margin-top:-20px;">Delete</button>
+                    <!-- <button (click)="deleteTask(i.id)"
+                        style="margin-left: 1000px; width: 40px; height: 32px;"
+                        type="button"
+                        class="btn btn-outline-danger"
+                       
+                      >
+                        <span  class="material-icons red-color">delete</span>
+                      </button> -->
+                  </div>
+                </th>
+              </tr>
+            </thead>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
